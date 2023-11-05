@@ -2,6 +2,9 @@ package br.com.fag.springboot.dtos;
 
 import java.math.BigDecimal;
 
-public record ProductRecordDto(String name, BigDecimal value) {
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+public record ProductRecordDto(@NotBlank String name, @NotNull BigDecimal value) {
   
 }
